@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "82ffd933-3bb9-411c-936a-c0030ac9088b",
+		"name": "ogs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addProducts",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"1234567891\",\r\n    \"product\": [\r\n        \"prodD\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:9090/api/addProducts"
+			},
+			"response": []
+		},
+		{
+			"name": "updateProducts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"1234567891\",\r\n    \"product\": [\r\n        \"prodA\",\r\n        \"prodB\",\r\n        \"prodC\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:9090/api/addProducts"
+			},
+			"response": []
+		},
+		{
+			"name": "getProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:9090/api/getProducts/1234567891"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"1234567891\",\r\n    \"product\": [\r\n        \"prodA\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:9090/api/deleteProduct/1234567891"
+			},
+			"response": []
+		}
+	]
+}
