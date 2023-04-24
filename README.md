@@ -5,3 +5,7 @@ This is a Spring Boot API for online groceries store for products. it has the fo
 - Updating the Products
 - Deleting the Product
 - Retriving the Products
+
+
+# Test
+Attatched a postman collection which can be used for testing the api.
