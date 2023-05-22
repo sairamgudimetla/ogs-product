@@ -6,6 +6,7 @@ This is a Spring Boot API for online groceries store for products. it has the fo
 - Deleting the Product
 - Retriving the Products
 
+Used an H2 database just to ignore too much config of setting up other database Setup's
 
 # Test
 Attatched a postman collection which can be used for testing the api.
