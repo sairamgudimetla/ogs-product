@@ -21,35 +21,40 @@ public class OgsService {
 	public Integer addProduct(Product products) {
 		
 		ogsRepo.save(products);
-		System.out.println(products.getProduct());
+
 		return products.getUserId();
+
 	}
 
 	public List<String> getProducts(Integer uid) {
 		
 		List<String> lst = new ArrayList<String>();
+		
 		try {
 			lst = ogsRepo.findById(uid).get().getProduct();
 		}catch (Exception e) {
 			throw new RuntimeException("No Data Found for this user");
 		}
-		System.out.println(lst);
+
 		return lst;
 	}
 
 	public void deleteProduct(Integer uid, Product product) {
-		
+
 		Product prds = ogsRepo.findById(product.getUserId()).get();
 		prds.getProduct().removeAll(product.getProduct());
 		ogsRepo.save(prds);
+
 	}
 	
 	public void updateProductsData(Integer uid, Product products) {
+
 		Product existingProducts = ogsRepo.findById(uid).get();
 		products.getProduct().addAll(existingProducts.getProduct());
+
 		ogsRepo.deleteById(products.getUserId());
 		ogsRepo.save(products);
-		
+
 	}
 
 }

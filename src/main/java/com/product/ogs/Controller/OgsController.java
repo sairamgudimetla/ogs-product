@@ -23,8 +23,8 @@ public class OgsController {
 	@PostMapping("/api/addProducts")
 	public Integer addProducts(@RequestBody Product products) {
 
-		System.out.println(products.getProduct());
 		return ogsService.addProduct(products);
+
 	}
 	
 	@GetMapping("/api/getProducts/{userId}")
@@ -47,6 +47,5 @@ public class OgsController {
 		ogsService.deleteProduct(uid, product);
 		
 	}
-	
 
 }
