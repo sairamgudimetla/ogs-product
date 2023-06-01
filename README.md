@@ -8,5 +8,5 @@ This is a Spring Boot API for online groceries store for products. it has the fo
 
 Used an H2 database just to ignore too much config of setting up other database Setup.
 
-# Test
+# test
 Attatched a postman collection which can be used for testing the api.
